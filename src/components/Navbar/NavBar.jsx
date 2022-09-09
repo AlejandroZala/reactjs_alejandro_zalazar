@@ -1,9 +1,9 @@
+import "./navBar.css";
+
 function NavBar() {
     return (
         <nav className="navBar">
-            <h1>
-                <strong>Negocios Inmobiliarios</strong>
-            </h1>
+
             <ul>
                 <li>Inicio</li>
                 <li>Nosotros</li>
