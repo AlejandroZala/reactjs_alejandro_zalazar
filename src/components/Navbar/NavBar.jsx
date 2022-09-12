@@ -24,6 +24,6 @@ function NavBar() {
                 <li></li>
             </ul>
         </nav>
-    )
+    );
 }
 export default NavBar;

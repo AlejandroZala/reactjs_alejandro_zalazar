@@ -3,17 +3,4 @@
   flex-direction: column;
 }
 
-.App-header {
-  background-color: rgb(17, 17, 17);
-  min-height: 12vh;
-  /* margin-right: 10px; */
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  color: white;
-}
 
-.App-logo {
-  height: 12vmin;
-}
