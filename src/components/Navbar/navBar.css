@@ -1,13 +1,12 @@
 .ContenedorNav{
     background-color: burlywood;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .MenuNav {
     display: flex;
     list-style: none;
-    margin-left: 35px;
     flex-direction: row;
 }
 

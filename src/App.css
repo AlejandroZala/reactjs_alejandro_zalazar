@@ -3,4 +3,13 @@
   flex-direction: column;
 }
 
+.main{
+  margin: 15px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
 

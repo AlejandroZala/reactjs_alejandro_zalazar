@@ -1,3 +1,5 @@
+import React from "react";
+import CardWidget from "./CardWidget";
 import "./navBar.css";
 
 function NavBar() {
@@ -19,11 +21,10 @@ function NavBar() {
                 <li>
                     <a href="#datosUbicación">Ubicación</a>
                 </li>
-
-                <li></li>
-                <li></li>
             </ul>
+            <CardWidget/>
         </nav>
+        
     );
 }
 export default NavBar;
