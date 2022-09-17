@@ -1,18 +1,21 @@
 import React from "react";
+import Button from "../Button/Button";
 import "./cardProducto.css";
 
-function CardProducto() {
+function CardProducto(props) {
+  let { precio, nombre, img, descripcion } = props;
+  
   return (
     <div className="cardProducto">
       <div className="imagProducto">
-        <img src="" className="" alt="imag producto" />
+        <img src={img} className="" alt="imag producto" />
       </div>
       <div className="descripcionCard">
-        <h3>Titulo producto</h3>
-        <p className="">Descripción</p>
-        <h4>Precio $1500</h4>
+        <h3>{nombre}</h3>
+        <p className="">{descripcion}</p>
+        <h4>${precio}</h4>
       </div>
-      <a href="#vermas">Ver más</a>
+      <Button color="red">Ver más</Button>
     </div>
   );
 }
