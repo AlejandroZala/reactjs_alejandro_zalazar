@@ -1,26 +1,22 @@
-import React from "react";
-import CardProducto  from "./CardProducto";
+import React, {useState, useEffect} from "react";
+import ItemList  from "./ItemList";
+import getItems from "../../services/mockApi";
 
 function ItemListContainer(props) {
+
+  let [data, setData] = useState([]);
+
+  useEffect(() => {
+    getItems().then((respuestaDatos) => {
+      setData (respuestaDatos);
+    });
+  }, []);
+
   return (
     <div>
       <h2>{props.greeting}</h2>
-      <div className="main container">
-        <CardProducto
-          precio="1500"
-          nombre="Crema Nutritiva Regeneradora"
-          descripcion="Con ácido hialurónico, colágeno, caléndula"
-          img="https://http2.mlstatic.com/D_NQ_NP_758724-MLA48843033111_012022-O.webp"
-          />
-        <CardProducto/>
-        <CardProducto/>
-        <CardProducto/>
-        <CardProducto/>
-        <CardProducto/>
-
-      </div>
+      <ItemList data={data}/>
     </div>
-
   )
 }
 
