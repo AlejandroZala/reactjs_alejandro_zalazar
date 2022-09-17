@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "../Button/Button";
+import ItemCount from "../ItemCount/itemCount";
 import "./cardProducto.css";
 
 function CardProducto(props) {
@@ -15,7 +16,8 @@ function CardProducto(props) {
         <p className="">{descripcion}</p>
         <h4>${precio}</h4>
       </div>
-      <Button color="red">Ver más</Button>
+      <Button colorInicial="red">Ver más</Button>
+      <ItemCount valorMin={1} valorMax={5}/>
     </div>
   );
 }
