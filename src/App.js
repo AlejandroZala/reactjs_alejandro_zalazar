@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <Header/>
       <Navbar/>
-      <ItemListContainer greeting="Los más ricos productos"/>
+      <ItemListContainer greeting="Elige tus productos deseados"/>
 
     </div>
   );

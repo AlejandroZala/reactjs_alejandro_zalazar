@@ -7,7 +7,7 @@ function Header() {
         <div>
             <img src="/imagenes/logoda.jpg" className="App-logo" alt="logo" />
         </div>
-        <h1>Productos Artesanales</h1>
+        <h1>Estética Profesional</h1>
     </header>
   );
 }

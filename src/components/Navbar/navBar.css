@@ -1,5 +1,5 @@
 .ContenedorNav{
-    background-color: burlywood;
+    background-color: rgb(155, 222, 135);
     display: flex;
     justify-content: space-between;
 }
