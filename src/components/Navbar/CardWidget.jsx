@@ -5,7 +5,7 @@ function CardWidget() {
   return (
     <div className="contenedorWidget">
         <div>
-            <img src="/imagenes/3126695.png" className="widget" alt="logoCarrito" />
+            <img src="/imagenes/carrito.png" className="widget" alt="logoCarrito" />
         </div>
         <span>0</span>
     </div>

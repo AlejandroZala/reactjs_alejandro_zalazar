@@ -4,7 +4,7 @@ import ItemCount from "../ItemCount/itemCount";
 import "./cardProducto.css";
 
 function CardProducto(props) {
-  let { precio, nombre, img, descripcion } = props;
+  let { precio, nombre, img, descripcion, stock } = props;
 
   return (
     <div className="cardProducto">
@@ -17,7 +17,9 @@ function CardProducto(props) {
         <h4>${precio}</h4>
       </div>
       <Button colorInicial="red">Ver más</Button>
-      <ItemCount valorMin={1} valorMax={5}/>
+      <ItemCount 
+        valorMin={1} 
+        valorMax={stock}/>
     </div>
   );
 }
