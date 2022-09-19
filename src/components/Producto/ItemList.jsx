@@ -1,5 +1,5 @@
 import React from 'react';
-import CardProducto from "./CardProducto";
+import CardProducto from "./Item";
 
 function ItemList(props) {
   return (

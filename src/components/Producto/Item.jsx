@@ -1,17 +1,17 @@
 import React from "react";
 import Button from "../Button/Button";
 import ItemCount from "../ItemCount/itemCount";
-import "./cardProducto.css";
+import "./item.css";
 
-function CardProducto(props) {
+function Item(props) {
   let { precio, nombre, img, descripcion, stock } = props;
 
   return (
-    <div className="cardProducto">
-      <div className="imagProducto">
+    <div className="item">
+      <div className="imagItem">
         <img src={img} alt="" />
       </div>
-      <div className="descripcionCard">
+      <div className="descripcionItem">
         <h4>{nombre}</h4>
         <p className="">{descripcion}</p>
         <h4>${precio}</h4>
@@ -25,4 +25,4 @@ function CardProducto(props) {
   );
 }
 
-export default CardProducto;
+export default Item;
