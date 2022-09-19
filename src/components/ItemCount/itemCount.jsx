@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../ItemCount/itemCount.css";
 
 function ItemCount(props) {
   const [count, setCount] = React.useState(props.valorMin);
@@ -22,11 +23,11 @@ function ItemCount(props) {
   return (
     <div className="main container">
       <div>
-        <button onClick={handleResta}>-</button>
+        <button className="btnMasMenos" onClick={handleResta}>-</button>
         <span>{count}</span>
-        <button onClick={handleSuma}>+</button>
+        <button className="btnMasMenos" onClick={handleSuma}>+</button>
       </div>
-      <button onClick={onAddToCart}>Agregar al carrito</button>
+      <button className="btnAgregarCarro" onClick={onAddToCart}>Agregar al carrito</button>
     </div>
   );
 }

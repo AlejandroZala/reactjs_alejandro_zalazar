@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./button.css";
 
 function Button({ children }) {
-  const [color, setColor] = useState("blue");
+  const [color, setColor] = useState("rgb(108, 204, 79)");
 
   function handleClick() {
     setColor("lightblue");

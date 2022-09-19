@@ -56,7 +56,7 @@ const data = [
         precio: 700,
         categoria: "Geles",
         descripcion: "Con Aminoácidos y péptidos de colágeno y elastina, Vitamina E, acetato y Urea.",
-        img: "/Imagenes/geles/gel_calendula.webp",
+        img: "/Imagenes/geles/gel_colageno.webp",
         stock: 35,
     },
 ];

@@ -15,6 +15,7 @@ function CardProducto(props) {
         <h4>{nombre}</h4>
         <p className="">{descripcion}</p>
         <h4>${precio}</h4>
+        <p>Stock disponible: {stock}</p>
       </div>
       <Button colorInicial="red">Ver más</Button>
       <ItemCount 
