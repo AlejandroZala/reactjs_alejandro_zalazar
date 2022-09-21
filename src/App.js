@@ -3,7 +3,8 @@ import './App.css';
 import "bootstrap/dist/css/bootstrap.css";
 import Navbar from './components/NavBar/NavBar';
 import Header from './components/Header/Header';
-import ItemListContainer from './components/Producto/ItemListContainer';
+// import ItemListContainer from './components/Producto/ItemListContainer';
+import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 
 
 function App() {
@@ -11,7 +12,8 @@ function App() {
     <div className="App">
       <Header/>
       <Navbar/>
-      <ItemListContainer greeting="Elige tus productos deseados"/>
+      {/* <ItemListContainer greeting="Elige tus productos deseados"/> */}
+      <ItemDetailContainer/>
 
     </div>
   );

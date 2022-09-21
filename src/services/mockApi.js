@@ -68,3 +68,11 @@ export default function getItems() {
         }, 2000);
     });
 }
+
+export function getSingleItem() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(data[4]);
+        }, 2000);
+    });
+}
