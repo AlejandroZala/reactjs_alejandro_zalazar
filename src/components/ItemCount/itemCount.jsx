@@ -11,7 +11,7 @@ function ItemCount(props) {
   }
 
   function handleResta() {
-    if (count > 1) {
+    if (count > props.valorMin) {
         setCount(count - 1);
     }
   }
