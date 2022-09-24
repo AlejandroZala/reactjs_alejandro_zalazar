@@ -1,6 +1,6 @@
 import React from "react";
 import Button from "../Button/Button";
-import ItemCount from "../ItemCount/itemCount";
+import ItemCount from "../ItemCount/ItemCount";
 import "./item.css";
 
 function Item(props) {
@@ -9,7 +9,7 @@ function Item(props) {
   return (
     <div className="item">
       <div className="imagItem">
-        <img src={img} alt="" />
+        <img src={img} alt={nombre} />
       </div>
       <div className="descripcionItem">
         <h4>{nombre}</h4>

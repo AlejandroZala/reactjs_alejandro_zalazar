@@ -7,7 +7,7 @@ function ItemDetail() {
     let [data, setData] = useState({});
 
     useEffect(() => {
-        getSingleItem().then((respuestaDatos) => setData (respuestaDatos));
+        getSingleItem(2).then((respuestaDatos) => setData (respuestaDatos));
     }, []);
       
   return (

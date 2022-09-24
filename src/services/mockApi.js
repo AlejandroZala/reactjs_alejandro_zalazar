@@ -69,10 +69,12 @@ export default function getItems() {
     });
 }
 
-export function getSingleItem() {
+export function getSingleItem(idItem) {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            resolve(data[4]);
+            let itemFind = data.find((item) => item.id === idItem);
+            if (itemFind) resolve(itemFind);
+            else reject(new Error("Item no encontrado"));
         }, 2000);
     });
 }
