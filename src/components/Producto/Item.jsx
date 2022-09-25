@@ -1,6 +1,6 @@
 import React from "react";
 import Button from "../Button/Button";
-import ItemCount from "../ItemCount/ItemCount";
+
 import "./item.css";
 
 function Item(props) {
@@ -18,9 +18,7 @@ function Item(props) {
         <p>Stock disponible: {stock}</p>
       </div>
       <Button colorInicial="red">Ver más</Button>
-      <ItemCount 
-        valorMin={1} 
-        valorMax={stock}/>
+
     </div>
   );
 }

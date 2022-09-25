@@ -1,4 +1,5 @@
 import React, {useState,useEffect} from 'react';
+import ItemCount from "../ItemCount/ItemCount";
 import {getSingleItem} from '../../services/mockApi';
 import "./itemDetail.css"
 
@@ -19,6 +20,9 @@ function ItemDetail() {
                 <div className='cajaPrecioStockDetalle'>
                     <h2>${data.precio}</h2>
                     <p>Stock disponible: {data.stock} unidades</p>
+                    <ItemCount 
+                        valorMin={1} 
+                        valorMax={data.stock}/>
                     <p>{data.descripcion}</p>
                 </div>
             </div>
