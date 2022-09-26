@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import ItemList  from "./ItemList";
+import Item from "./Item";
 import getItems from "../../services/mockApi";
 
 function ItemListContainer(props) {
@@ -15,7 +15,19 @@ function ItemListContainer(props) {
   return (
     <div>
       <h2>{props.greeting}</h2>
-      <ItemList data={data}/>
+      <div className="main container">
+        {data.map((item) => {
+            console.log(item);
+            return <Item
+                        key={item.id}
+                        id={item.id}
+                        nombre={item.nombre}
+                        precio={item.precio}
+                        img={item.img}
+                        descripcion={item.descripcion}
+                        stock={item.stock}/>
+      })}
+      </div>
     </div>
   )
 }
