@@ -1,7 +1,7 @@
 import React from 'react';
 import ItemDetail from '../ItemDetail/ItemDetail';
 
-function ItemDetailContainer(props) {
+function ItemDetailContainer() {
 
     return (
         <div>

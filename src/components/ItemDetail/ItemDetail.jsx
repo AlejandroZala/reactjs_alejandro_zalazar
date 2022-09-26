@@ -1,15 +1,17 @@
 import React, {useState,useEffect} from 'react';
 import ItemCount from "../ItemCount/ItemCount";
 import {getSingleItem} from '../../services/mockApi';
+import {useParams} from "react-router-dom";
 import "./itemDetail.css"
 
 function ItemDetail() {
 
     let [data, setData] = useState({});
+    const {id}= useParams();
 
     useEffect(() => {
-        getSingleItem(2).then((respuestaDatos) => setData (respuestaDatos));
-    }, []);
+        getSingleItem(id).then((respuestaDatos) => setData (respuestaDatos));
+    }, [id]);
       
   return (
     <div>

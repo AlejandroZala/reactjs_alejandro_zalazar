@@ -72,7 +72,10 @@ export default function getItems() {
 export function getSingleItem(idItem) {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            let itemFind = data.find((item) => item.id === idItem);
+            let itemFind = data.find((item) => {
+            console.log("find",item.id,idItem);
+            return item.id === parseInt(idItem)});
+
             if (itemFind) resolve(itemFind);
             else reject(new Error("Item no encontrado"));
         }, 2000);

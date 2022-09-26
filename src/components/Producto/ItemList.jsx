@@ -8,6 +8,7 @@ function ItemList(props) {
             console.log(item);
             return <Item
                         key={item.id}
+                        id={item.id}
                         nombre={item.nombre}
                         precio={item.precio}
                         img={item.img}

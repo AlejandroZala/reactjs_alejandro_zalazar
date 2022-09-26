@@ -18,7 +18,7 @@ function App() {
             <Route path="/" element={
                 <ItemListContainer greeting="Elige tus productos deseados"/>
             }/>
-            <Route path="/detalle" element={
+            <Route path="/detalle/:id" element={
                 <ItemDetailContainer/>
             }/>
             <Route path="*" element={

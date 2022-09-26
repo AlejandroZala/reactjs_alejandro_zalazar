@@ -1,10 +1,12 @@
 import React from "react";
 import Button from "../Button/Button";
+import {Link} from "react-router-dom";
 
 import "./item.css";
 
 function Item(props) {
-  let { precio, nombre, img, descripcion, stock } = props;
+  let { precio, nombre, img, descripcion, stock, id } = props;
+  const urlDetalle = `/detalle/${id}-${nombre}`;
 
   return (
     <div className="item">
@@ -17,8 +19,9 @@ function Item(props) {
         <h4>${precio}</h4>
         <p>Stock disponible: {stock}</p>
       </div>
-      <Button colorInicial="red">Ver más</Button>
-
+      <Link to={urlDetalle}>
+        <Button>Ver más</Button>
+      </Link>
     </div>
   );
 }
