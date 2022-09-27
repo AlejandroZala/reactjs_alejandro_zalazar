@@ -1,5 +1,6 @@
 import React from "react";
 import "./header.css";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
@@ -7,7 +8,10 @@ function Header() {
         <div>
             <img src="/imagenes/logoda.jpg" className="App-logo" alt="logo" />
         </div>
-        <h1>Estética Profesional</h1>
+        <Link to="/">
+            <h1 className="TituloBrand">Estética Profesional</h1> 
+        </Link>
+
     </header>
   );
 }

@@ -8,13 +8,13 @@ function NavBar() {
         <nav className="ContenedorNav">
             <ul className="MenuNav">
                 <li>
-                    <Link to="/">Inicio</Link>
+                    <Link to="/">Productos</Link>
                 </li>
                 <li>
-                    <Link to="#datosProductos">Servicios</Link>
+                    <Link to="/categoria/cremas">Cremas</Link>
                 </li>
                 <li>
-                    <Link to="/detalle">Productos</Link>
+                    <Link to="/categoria/geles">Geles</Link>
                 </li>
                 <li>
                     <Link to="#datosContacto">Contacto</Link>
