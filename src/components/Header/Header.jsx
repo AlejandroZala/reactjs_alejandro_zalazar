@@ -8,8 +8,8 @@ function Header() {
         <div>
             <img src="/imagenes/logoda.jpg" className="App-logo" alt="logo" />
         </div>
-        <Link to="/">
-            <h1 className="TituloBrand">Estética Profesional</h1> 
+        <Link to="/" className="TituloBrand">
+            <h1>Estética Profesional</h1> 
         </Link>
 
     </header>
