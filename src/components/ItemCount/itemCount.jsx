@@ -16,6 +16,7 @@ function ItemCount({valorMin, valorMax, onAddToCart}) {
     }
   }
 
+  
   // function onAddToCart() {
   //   alert('Usted agrego producto al carrito')
   // }
@@ -27,7 +28,11 @@ function ItemCount({valorMin, valorMax, onAddToCart}) {
         <span>{count}</span>
         <button className="btnMasMenos" onClick={handleSuma}>+</button>
       </div>
-      <button className="btnAgregarCarro" onClick={onAddToCart}>Agregar al carrito</button>
+      <button 
+        className="btnAgregarCarro" 
+        onClick={() => {
+          onAddToCart(count);
+          }}>Agregar al carrito</button>
     </div>
   );
 }
