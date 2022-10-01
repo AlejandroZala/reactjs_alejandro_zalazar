@@ -18,12 +18,12 @@ function ItemDetail( {data}) {
                 <p>Stock disponible: {data.stock} unidades</p>
 
                 {estadoCart === false ? (
-                <ItemCount 
-                    valorMin={1} 
-                    valorMax={data.stock} 
-                    onAddToCart={handleAddToCart}/>
-                ):(
-                <button> Finalizar compra</button>
+                    <ItemCount 
+                        valorMin={1} 
+                        valorMax={data.stock} 
+                        onAddToCart={handleAddToCart}/>
+                    ):(
+                    <button> Finalizar compra</button>
                 )}
                 
                 <p>{data.descripcion}</p>
