@@ -24,8 +24,11 @@ function App() {
             <Route path="/categoria/:cat" element={
                 <ItemListContainer/>
             }/>
+            <Route path="/cart" element={
+              <h2> Pagina en desarrollo</h2>
+            }/>
             <Route path="*" element={
-                <h2> 404: No existe link</h2>
+              <h2> 404: No existe link</h2>
             }></Route>
         </Routes> {" "}
       </div>
