@@ -6,8 +6,6 @@ const ItemDetail = ( {data}) => {
 
     const [estadoCart, setEstadoCart] = useState(true)
 
-    // let estadoCart = false;
-
     function handleAddToCart (count) {
         alert(`agregaste al carrito ${count} productos`)
         setEstadoCart(false)
@@ -28,7 +26,7 @@ const ItemDetail = ( {data}) => {
                         onAddToCart={handleAddToCart}/>
                         : <Link to='/cart'> Finalizar compra</Link>
                     }
-                                       
+
                     <p>{data.descripcion}</p>
                 </div>
             </div>
