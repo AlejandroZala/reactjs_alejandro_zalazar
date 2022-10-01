@@ -1,25 +1,26 @@
 import React from "react";
 import CardWidget from "./CardWidget";
 import "./navBar.css";
+import { Link } from "react-router-dom";
 
-function NavBar() {
+function NavBar() { 
     return (
         <nav className="ContenedorNav">
             <ul className="MenuNav">
                 <li>
-                    <a href="#datosinicio">Inicio</a>
+                    <Link to="/">Productos</Link>
                 </li>
                 <li>
-                    <a href="#datosProductos">Servicios</a>
+                    <Link to="/categoria/cremas">Cremas</Link>
                 </li>
                 <li>
-                    <a href="#datosNosotros">Productos</a>
+                    <Link to="/categoria/geles">Geles</Link>
                 </li>
                 <li>
-                    <a href="#datosContacto">Contacto</a>
+                    <Link to="#datosContacto">Contacto</Link>
                 </li>
                 <li>
-                    <a href="#datosUbicación">Ubicación</a>
+                    <Link to="#datosUbicación">Ubicación</Link>
                 </li>
             </ul>
             <CardWidget/>

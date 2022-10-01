@@ -1,24 +1,25 @@
-import React, { useState } from "react";
+import React from "react";
 import "../ItemCount/itemCount.css";
 
-function ItemCount(props) {
-  const [count, setCount] = React.useState(props.valorMin);
+function ItemCount({valorMin, valorMax, onAddToCart}) {
+  const [count, setCount] = React.useState(valorMin);
 
   function handleSuma() {
-    if (count < props.valorMax){
+    if (count < valorMax){
         setCount(count + 1);
     }
   }
 
   function handleResta() {
-    if (count > props.valorMin) {
+    if (count > valorMin) {
         setCount(count - 1);
     }
   }
 
-  function onAddToCart() {
-    alert('Usted agrego producto al carrito')
-  }
+  
+  // function onAddToCart() {
+  //   alert('Usted agrego producto al carrito')
+  // }
 
   return (
     <div className="main container">
@@ -27,7 +28,11 @@ function ItemCount(props) {
         <span>{count}</span>
         <button className="btnMasMenos" onClick={handleSuma}>+</button>
       </div>
-      <button className="btnAgregarCarro" onClick={onAddToCart}>Agregar al carrito</button>
+      <button 
+        className="btnAgregarCarro" 
+        onClick={() => {
+          onAddToCart(count);
+          }}>Agregar al carrito</button>
     </div>
   );
 }
