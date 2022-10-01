@@ -12,6 +12,8 @@ function ItemDetailContainer() {
     getSingleItem(id).then((respuestaDatos) => setData(respuestaDatos));
   }, [id]);
 
+  let estadoCart = false;
+
   function handleAddToCart () {
     alert('agregaste al carrito')
   }
@@ -25,8 +27,14 @@ function ItemDetailContainer() {
           <div className="cajaPrecioStockDetalle">
             <h2>${data.precio}</h2>
             <p>Stock disponible: {data.stock} unidades</p>
+
+            {estadoCart === false ? (
             <ItemCount valorMin={1} valorMax={data.stock} onAddToCart={handleAddToCart}/>
-            <p>{data.descripcion}</p>
+            ):(
+              <button> Finalizar compra</button>
+              )}
+            
+              <p>{data.descripcion}</p>
           </div>
         </div>
       </div>
