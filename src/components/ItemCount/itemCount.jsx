@@ -15,12 +15,7 @@ function ItemCount({valorMin, valorMax, onAddToCart}) {
         setCount(count - 1);
     }
   }
-
   
-  // function onAddToCart() {
-  //   alert('Usted agrego producto al carrito')
-  // }
-
   return (
     <div className="main container">
       <div>

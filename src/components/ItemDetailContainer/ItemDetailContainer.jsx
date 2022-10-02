@@ -3,7 +3,7 @@ import ItemDetail from './ItemDetail';
 import { getSingleItem } from "../../services/mockApi";
 import { useParams } from "react-router-dom";
 import "./itemDetail.css";
-import { Spinner } from 'react-bootstrap';
+import Loading from "../Loading/Loading.jsx";
 
 function ItemDetailContainer() {
   const [data, setData] = useState({});
@@ -19,7 +19,7 @@ function ItemDetailContainer() {
 
   return (
     <div>
-      {!loading ?<ItemDetail data={data}/> : <Spinner animation="border" variant="primary"/>}
+      {!loading ?<ItemDetail data={data}/> : <Loading/>}
     </div>
   );
 }

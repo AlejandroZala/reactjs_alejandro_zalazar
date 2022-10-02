@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
 import getItems, {getItemsByCategory} from "../../services/mockApi";
-import { Spinner } from 'react-bootstrap';
+import Loading from "../Loading/Loading.jsx";
 
 function ItemListContainer(props) {
 
@@ -17,7 +17,6 @@ function ItemListContainer(props) {
           setData(respuestaDatos)
           setLoading(false)
       })
-
     }
     else {
       getItemsByCategory(cat)
@@ -29,9 +28,9 @@ function ItemListContainer(props) {
   }, [cat]);
 
   return (
-    <div>
+    <div className="App">
       <h2>{props.greeting}</h2>
-      {!loading ?<ItemList data={data}/> : <Spinner animation="border" variant="primary"/>}
+      {!loading ?<ItemList data={data}/> : <Loading/>}
     </div>
   )
 }

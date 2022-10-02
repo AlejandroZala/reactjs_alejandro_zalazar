@@ -1,15 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import ItemCount from '../ItemCount/ItemCount';
 import {Link} from 'react-router-dom';
+import { cartCtx } from "../../context/cartContext";
 
-const ItemDetail = ( {data}) => {
+function ItemDetail ({ data }) {
+
+    // conectarnos al context con useContext
+    const { addItem } = useContext(cartCtx);
 
     const [estadoCart, setEstadoCart] = useState(true)
 
-    // let estadoCart = false;
-
     function handleAddToCart (count) {
-        alert(`agregaste al carrito ${count} productos`)
+        // alert(`agregaste al carrito ${count} productos`)
+        addItem(data, count);
         setEstadoCart(false)
     }
 
@@ -22,13 +25,14 @@ const ItemDetail = ( {data}) => {
                     <h2>${data.precio}</h2>
                     <p>Stock disponible: {data.stock} unidades</p>
 
-                    {estadoCart ? <ItemCount 
+                    {estadoCart ? 
+                    <ItemCount 
                         valorMin={1} 
                         valorMax={data.stock} 
                         onAddToCart={handleAddToCart}/>
-                        : <Link to='/cart'> Finalizar compra</Link>
+                         : <Link to='/cart'> Finalizar compra</Link>
                     }
-                                       
+
                     <p>{data.descripcion}</p>
                 </div>
             </div>
