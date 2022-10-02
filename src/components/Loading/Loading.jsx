@@ -7,7 +7,7 @@ function Loading() {
   return (
     <div className="divPadre">
         <div className="divHijo">
-            <Spinner animation="border" variant="primary" className="spinnerBig"/>
+            <Spinner animation="border" variant="dark" className="spinnerBig"/>
         </div>
     </div>
   )

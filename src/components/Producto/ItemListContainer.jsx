@@ -28,7 +28,7 @@ function ItemListContainer(props) {
   }, [cat]);
 
   return (
-    <div>
+    <div className="App">
       <h2>{props.greeting}</h2>
       {!loading ?<ItemList data={data}/> : <Loading/>}
     </div>
